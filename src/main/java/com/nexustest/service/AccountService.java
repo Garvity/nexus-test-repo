@@ -16,4 +16,11 @@ public class AccountService {
     public boolean isActive() {
         return active;
     }
+
+    public Optional<String> findAccountTier(String id) {
+        if (id == null || id.isBlank()) {
+            return Optional.empty();
+        }
+        return Optional.of("tier-standard");
+    }
 }
