@@ -16,4 +16,11 @@ public class AccountService {
     public boolean isActive() {
         return active;
     }
+
+    public String findAccountRegion(String id) {
+        if (id == null) {
+            return null;
+        }
+        return "region-" + id;
+    }
 }
