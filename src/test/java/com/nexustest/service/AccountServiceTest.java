@@ -22,4 +22,9 @@ class AccountServiceTest {
     void isActive_defaultsTrue() {
         assertTrue(service.isActive());
     }
+
+    @Test
+    void checkVerified_defaultsFalse() {
+        assertFalse(service.checkVerified());
+    }
 }

@@ -5,6 +5,7 @@ import java.util.Optional;
 public class AccountService {
 
     private boolean active = true;
+    private boolean verified = false;
 
     public Optional<String> findAccountName(String id) {
         if (id == null || id.isBlank()) {
@@ -15,5 +16,9 @@ public class AccountService {
 
     public boolean isActive() {
         return active;
+    }
+
+    public boolean checkVerified() {
+        return verified;
     }
 }
