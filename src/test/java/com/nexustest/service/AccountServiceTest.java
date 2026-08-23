@@ -22,4 +22,14 @@ class AccountServiceTest {
     void isActive_defaultsTrue() {
         assertTrue(service.isActive());
     }
+
+    @Test
+    void isLocked_defaultsFalse() {
+        assertFalse(service.isLocked());
+    }
+
+    @Test
+    void findAccountStatus_returnsOpenWhenNotLocked() {
+        assertEquals("open", service.findAccountStatus("42").get());
+    }
 }
